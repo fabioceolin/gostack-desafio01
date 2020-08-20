@@ -37,12 +37,12 @@ app.put("/repositories/:id", (request, response) => {
   }
 
   const repository = {
-    id, title, url, techs, 
+    id, title, url, techs, likes: repositories[repositoryIndexID].likes
   }
 
-  repository[repositoryIndexID] = repository
+  repositories[repositoryIndexID] = repository
 
-  return response.json(project)
+  return response.json(repository)
 
 });
 
